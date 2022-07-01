@@ -46,7 +46,7 @@ I worked this project with Python, writing in VSC. The data we received was a cs
 
 What we're doing is going row-by-row through the csv file and first, adding that vote to the running tally of total votes. Then we're checking to see if the candidate on the ballot already exists in our list of candidates. If they do not, then we add them to our list and then in either case we add a tally to that specific candidates' vote tally. The same concept was applied to counties with "county_list" and "county_votes" variables.
 
-From that one pass through the csv we had all the data we needed to answer the questions above and from there it was just a question of formatting it to print to the terminal and save it in the attached text file: [link to election_results.txt here]
+From that one pass through the csv we had all the data we needed to answer the questions above and from there it was just a question of formatting it to print to the terminal and save it in the [election_reults.txt](analysis/election_results.txt) file.
 
 ## Results
 The analysis of the election show that:
@@ -74,5 +74,5 @@ The analysis of the election show that:
 
 ## Future Work
 There are a few different options to go from here to expand this code into something more generally useful for the elections department. Two that come to mind that I think we can implement fairly quickly are below.
-1. If we wanted to tally up more races at once (like in a bigger election) we could request an additional column in the csv we're delivered that notes what race or initiative that vote is for (so each row looks like: Ballot Id, County, Race, Vote). And then nest all of our current logic within another loop that moves through the different races/initiatives.
+1. If we wanted to tally up more races at once (like in a bigger election) we could request an additional column in the csv we're delivered that notes what race or initiative that vote is for (so each row looks like: Ballot Id, County, Race, Vote). And then nest all our current logic within another loop that moves through the different races/initiatives.
 2. We could "trust-but-verify" that the data we received from the elections team is clean and add in logic to make sure that there are no duplicate ballot ids in the file as we're moving through it.
